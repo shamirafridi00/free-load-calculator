@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolt Load Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bolt Load Calculator</h1>
+        <form id="boltForm">
+            <label for="diameter">Bolt Diameter (mm):</label>
+            <input type="number" id="diameter" name="diameter" required>
+            <span class="tooltip" id="diameterTooltip">Enter the diameter of the bolt in millimeters.</span>
+            <span class="error" id="diameterError"></span>
+            
+            <label for="force">Applied Force (N):</label>
+            <input type="number" id="force" name="force" required>
+            <span class="tooltip" id="forceTooltip">Enter the applied force on the bolt in Newtons.</span>
+            <span class="error" id="forceError"></span>
+            
+            <label for="angle">Load Angle (degrees):</label>
+            <input type="number" id="angle" name="angle">
+            <span class="tooltip" id="angleTooltip">Enter the load angle in degrees (if applicable).</span>
+            <span class="error" id="angleError"></span>
+            
+            <label for="eccentricDistance">Eccentric Distance (mm):</label>
+            <input type="number" id="eccentricDistance" name="eccentricDistance">
+            <span class="tooltip" id="eccentricDistanceTooltip">Enter the eccentric distance in millimeters (if applicable).</span>
+            <span class="error" id="eccentricDistanceError"></span>
+            
+            <div class="button-group">
+                <button type="button" id="calculateTensile">Calculate Tensile Load</button>
+                <button type="button" id="calculateShear">Calculate Shear Load</button>
+                <button type="button" id="calculateClamp">Calculate Clamp Load</button>
+                <button type="button" id="calculateEccentric">Calculate Eccentric Load</button>
+                <button type="button" id="calculateAxial">Calculate Axial Load</button>
+                <button type="button" id="clearForm" class="clear-btn">Clear</button>
+            </div>
+        </form>
+        <div id="results"></div>
+        <div id="summary"></div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
